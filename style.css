@@ -1,0 +1,134 @@
+@font-face {
+    font-family: "Work Sans";
+    src: url("assets/fonts/WorkSans-VariableFont_wght.ttf");
+    font-weights: 400, 600, 700;
+}
+
+:root {
+    --font-primary: "Work Sans", sans-serif;
+
+    --bg-primary: hsl(275, 100%, 97%);
+    --bg-secondary: hsl(0, 0%, 100%);
+    --color-heading: hsl(292, 42%, 14%);
+    --color-text: hsl(292, 16%, 49%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: "Work Sans", sans-serif;
+    font-size: 62.5%;
+    overflow: hidden;
+}
+
+body {
+    background-color: var(--bg-primary);
+    background-image: url("assets/images/background-pattern-desktop.svg");
+    background-size: contain;
+    background-position: top center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    width: 100vw;
+}
+
+main {
+    max-width: 600px;
+    width: 80%;
+    background-color: var(--bg-secondary);
+    padding: 3.6rem;
+    border-radius: 1.2rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--color-text);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.header {
+    display: flex;
+    gap: 1.6rem;
+    align-items: center;
+
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-heading);
+}
+
+.accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.accordion-item {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid var(--bg-primary);
+}
+
+.accordion-item:last-child {
+    border-bottom: none;
+}
+
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--color-heading);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    margin: 1.5rem 0;
+
+    text-align: left;
+}
+
+.accordion-content.active {
+    max-height: 100rem;
+}
+
+@media (max-width: 59rem) {
+    html {
+        font-size: 56.25%;
+    }
+}
+
+@media (max-width: 44rem) {
+    html {
+        font-size: 52.55%;
+    }
+
+    body {
+        background-image: url("assets/images/background-pattern-mobile.svg");
+    }
+}
+
+@media (max-width: 34rem) {
+    html {
+        font-size: 50%;
+    }
+
+    body {
+        background-image: url("assets/images/background-pattern-mobile.svg");
+    }
+}
