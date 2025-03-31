@@ -9,7 +9,7 @@
     <a href="https://www.frontendmentor.io/challenges/faq-accordion" target="_blank"><strong>View Challenge</strong></a>
     <br />
     <br />
-    <a href="https://fakeyetami.github.io/faq-Accordion/" target="_blank">Live Demo</a>
+    <a href="https://fakeyetami.github.io/faq-accordion/" target="_blank">Live Demo</a>
     &nbsp;·&nbsp;
     <a href="https://github.com/FakeyeTami/faq-accordion/issues" target="_blank">Report Bug</a>
     &nbsp;·&nbsp;
