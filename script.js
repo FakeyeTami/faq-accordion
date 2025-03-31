@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     const accordions = document.querySelectorAll(".accordion-item");
 
-    // Open the first accordion by default
     let firstAccordion = accordions[0];
     firstAccordion.classList.add("active");
     let firstContent = firstAccordion.querySelector(".accordion-content");
@@ -12,7 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
         let content = accordion.querySelector(".accordion-content");
         let image = accordion.querySelector(".accordion-image");
 
-        // Make header focusable and set ARIA attributes
         header.setAttribute("role", "button");
         header.setAttribute("tabindex", "0");
         header.setAttribute(
@@ -31,7 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
     function toggleAccordion(accordion, content, image) {
         let isActive = accordion.classList.contains("active");
 
-        // Close all accordions if needed (optional)
         accordions.forEach((item) => {
             item.classList.remove("active");
             item.querySelector(".accordion-content").style.maxHeight = null;
